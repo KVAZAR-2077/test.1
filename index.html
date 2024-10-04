@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Handjet:wght@100..900&family=Rubik+Dirt&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Handjet:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik+Dirt&display=swap"
+        rel="stylesheet">
+    <title>Portfolio.1</title>
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        * {
+            scrollbar-width: none;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Основные стили для кнопки */
+
+        .knopka-vverx {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 700;
+        }
+
+        .text-knopka-vverx {
+            color: white;
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .knopka-vverx_show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .knopka-vverx:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* str1 */
+
+        .stranica1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            flex-direction: column;
+        }
+
+        .foto-EM {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            box-shadow: 0 0 28px rgba(0, 0, 0, 0.481);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                margin-bottom 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .foto-EM:hover {
+            transform: scale(1.09);
+            margin-bottom: 10px;
+        }
+
+        .text-opisanie-img-EM {
+            text-align: center;
+            color: black;
+            font-size: 3em;
+            margin-top: 20px;
+            font-family: "Comfortaa", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            position: relative;
+            padding-bottom: 5px;
+            overflow: hidden;
+            transition: margin-top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .text-opisanie-img-EM::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: black;
+            transition: width 0.5s ease, left 0.5s ease;
+        }
+
+        .text-opisanie-img-EM:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .foto-EM:hover+.text-opisanie-img-EM {
+            margin-top: 30px;
+        }
+
+        .text2-opisanie-img-EM {
+            text-align: center;
+            color: black;
+            font-size: 1.6em;
+            margin-top: 10px;
+            font-family: "Comfortaa", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            transition: margin-top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .foto-EM:hover+.text-opisanie-img-EM+.text2-opisanie-img-EM {
+            margin-top: 20px;
+        }
+
+        .padding-text-opisanie-img-EM {
+            padding: 0 200px;
+            margin-top: -20px;
+        }
+
+        .strelka-provodnik {
+            color: black;
+            font-size: 2em;
+            position: absolute;
+            bottom: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: transform 0.4s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .strelka-provodnik:hover {
+            transform: translateX(-50%) scale(1.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .stranica1 {
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .foto-EM {
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .text-opisanie-img-EM {
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        .text2-opisanie-img-EM {
+            animation: fadeInUp 1.4s ease-in-out;
+        }
+
+        .strelka-provodnik {
+            animation: fadeIn 1.6s ease-in-out;
+        }
+
+        /* burger-menu */
+
+        .burger-menu-fixsed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            width: 100%;
+        }
+
+        #menu {
+            z-index: 2;
+        }
+
+        #menu-bar {
+            width: 45px;
+            height: 40px;
+            margin: 25px 0 10px 25px;
+            cursor: pointer;
+        }
+
+        .bar {
+            height: 5px;
+            width: 100%;
+            background-color: #000000;
+            display: block;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        #bar1 {
+            transform: translateY(-4px);
+        }
+
+        #bar3 {
+            transform: translateY(4px);
+        }
+
+        .nav {
+            transition: 0.3s ease;
+            display: none;
+            margin-top: -10px;
+        }
+
+        .nav ul {
+            padding: 0 22px;
+        }
+
+        .nav li {
+            list-style: none;
+            padding: 12px 0;
+        }
+
+        .nav li a {
+            color: rgba(255, 255, 255, 0.64);
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.4s ease;
+        }
+
+        .nav li a:hover {
+            color: white;
+        }
+
+        .menu-bg,
+        #menu {
+            top: 0;
+            left: 0;
+            position: fixed;
+        }
+
+        .menu-bg {
+            z-index: 1;
+            width: 0;
+            height: 0;
+            margin: 30px 0 36px 20px;
+            background: radial-gradient(circle, #00000090, #00000057);
+            border-radius: 50%;
+            transition: 0.3s ease;
+            backdrop-filter: blur(15px);
+        }
+
+        .change {
+            display: block;
+        }
+
+        .change .bar {
+            background-color: white;
+        }
+
+        .change #bar1 {
+            transform: translateY(4px) rotateZ(-45deg);
+        }
+
+        .change #bar2 {
+            opacity: 0;
+        }
+
+        .change #bar3 {
+            transform: translateY(-6px) rotateZ(45deg);
+        }
+
+        .change-bg {
+            width: 520px;
+            height: 460px;
+            transform: translate(-60%, -30%);
+        }
+
+        /* poisk-pole */
+
+        .container-poisk-pole {
+            position: fixed;
+            top: 0;
+            right: 0;
+            right: 17px;
+            z-index: 99;
+        }
+
+        .poisk-pole {
+            width: 230px;
+            height: 35px;
+            margin-top: 16px;
+            border-radius: 40px;
+            border: 2px solid rgba(0, 0, 0, 0.504);
+            font-size: 19px;
+            padding-left: 15px;
+            padding-right: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+            transition: box-shadow 0.4s ease, border 0.4s ease;
+            background: none;
+            backdrop-filter: blur(3px);
+        }
+
+        .poisk-pole:focus {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.403);
+            border: 2px solid rgb(0, 0, 0);
+            outline: none;
+        }
+
+        /* stranica2 */
+
+        .stranica2 {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            background-color: rgba(250, 235, 215, 0.763);
+        }
+
+        .parallelogram {
+            width: 900px;
+            height: 100vh;
+            background-color: rgb(255, 123, 0);
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+            position: absolute;
+            left: 636px;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: translateY(60px) scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes fadeOutScale {
+            from {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(60px) scale(0.8);
+            }
+        }
+
+        .mon-raboti-text,
+        .raboti-uchenikov-text {
+            font-family: "Nunito", sans-serif;
+            font-size: 7em;
+            position: absolute;
+            opacity: 0;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        .mon-raboti-text {
+            top: -50px;
+            left: 60px;
+            color: rgb(0, 0, 0);
+        }
+
+        .raboti-uchenikov-text {
+            right: 60px;
+            top: 310px;
+            color: rgb(255, 255, 255);
+            text-align: right;
+            line-height: 0.9;
+        }
+
+        .mon-raboti-text.visible,
+        .raboti-uchenikov-text.visible {
+            animation-name: fadeInScale;
+        }
+
+        .mon-raboti-text:not(.visible),
+        .raboti-uchenikov-text:not(.visible) {
+            animation-name: fadeOutScale;
+        }
+
+        /* Анимации появления и исчезновения */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.8);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.8);
+            }
+        }
+
+        /* Круги */
+        .krug1,
+        .krug2,
+        .krug3,
+        .krug4 {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            border: 6px solid rgb(255, 145, 0);
+            border-radius: 25%;
+            transition: border 0.4s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        /* Позиции кругов */
+        .krug1 {
+            margin-left: 100px;
+            margin-top: 240px;
+        }
+
+        .krug2 {
+            margin-left: 150px;
+            margin-top: 350px;
+        }
+
+        .krug3 {
+            margin-left: 100px;
+            margin-top: 460px;
+        }
+
+        .krug4 {
+            margin-left: 150px;
+            margin-top: 570px;
+        }
+
+        /* Анимации появления при прокрутке */
+        .visible {
+            animation-name: fadeIn;
+            animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .hidden {
+            animation-name: fadeOut;
+            animation-timing-function: ease-out;
+        }
+
+        /* Эффект при наведении на круги */
+        .krug1:hover,
+        .krug2:hover,
+        .krug3:hover,
+        .krug4:hover {
+            border: 6px solid rgb(255, 221, 0);
+        }
+
+        /* Стиль текста внутри кругов */
+        .nomer1-krug1 {
+            font-family: "Nunito", sans-serif;
+            font-size: 3em;
+            color: rgb(255, 145, 0);
+        }
+
+        /* Текст рядом с кругами */
+        .krug-text {
+            position: absolute;
+            white-space: nowrap;
+            left: calc(100% + 40px);
+            top: 50%;
+            transform: translateY(-50%) translateX(-20px) scale(0.5);
+            opacity: 0;
+            transition: opacity 0.6s ease-out,
+                transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            font-family: "Nunito", sans-serif;
+            font-size: 2.5em;
+            color: rgb(255, 145, 0);
+            cursor: pointer;
+        }
+
+        /* Анимация появления текста при наведении */
+        .krug1:hover #text1,
+        .krug2:hover #text2,
+        .krug3:hover #text3,
+        .krug4:hover #text4 {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0) scale(1);
+        }
+
+        .block-smotret-rabot-uch {
+            width: 210px;
+            height: 80px;
+            position: absolute;
+            border: 6px solid rgb(255, 255, 255);
+            border-radius: 25px;
+            margin-top: 200px;
+            margin-left: 1010px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease, background-color 0.4s ease,
+                border-color 0.4s ease;
+        }
+
+        .text-block-smotret-rabot-uch {
+            color: white;
+            font-family: "Nunito", sans-serif;
+            font-size: 2.5em;
+            text-align: center;
+            cursor: pointer;
+            transition: color 0.4s ease;
+        }
+
+        .block-smotret-rabot-uch.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .block-smotret-rabot-uch:hover {
+            background-color: rgb(255, 249, 240);
+            border-color: rgb(255, 145, 0);
+        }
+
+        .block-smotret-rabot-uch:hover .text-block-smotret-rabot-uch {
+            color: rgb(255, 145, 0);
+        }
+
+        .tochka-strelka-smotr1,
+        .tochka-strelka-smotr2,
+        .tochka-strelka-smotr3,
+        .tochka-strelka-smotr4,
+        .tochka-strelka-smotr5,
+        .tochka-strelka-smotr6,
+        .tochka-strelka-smotr7,
+        .tochka-strelka-smotr8,
+        .tochka-strelka-smotr9,
+        .tochka-strelka-smotr10,
+        .tochka-strelka-smotr11,
+        .tochka-strelka-smotr12,
+        .tochka-strelka-smotr13 {
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(20px);
+        }
+
+        .show-strelka {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .tochka-strelka-smotr1,
+        .tochka-strelka-smotr2,
+        .tochka-strelka-smotr3,
+        .tochka-strelka-smotr4,
+        .tochka-strelka-smotr5,
+        .tochka-strelka-smotr6,
+        .tochka-strelka-smotr7,
+        .tochka-strelka-smotr8,
+        .tochka-strelka-smotr9,
+        .tochka-strelka-smotr10,
+        .tochka-strelka-smotr11,
+        .tochka-strelka-smotr12,
+        .tochka-strelka-smotr13 {
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+        }
+
+        .tochka-strelka-smotr1 {
+            margin-top: 450px;
+            margin-left: 1020px;
+        }
+
+        .tochka-strelka-smotr2 {
+            margin-top: 435px;
+            margin-left: 1010px;
+        }
+
+        .tochka-strelka-smotr3 {
+            margin-top: 420px;
+            margin-left: 1003px;
+        }
+
+        .tochka-strelka-smotr4 {
+            margin-top: 402px;
+            margin-left: 1000px;
+        }
+
+        .tochka-strelka-smotr5 {
+            margin-top: 385px;
+            margin-left: 1000px;
+        }
+
+        .tochka-strelka-smotr6 {
+            margin-top: 365px;
+            margin-left: 1005px;
+        }
+
+        .tochka-strelka-smotr6 {
+            margin-top: 368px;
+            margin-left: 1007px;
+        }
+
+        .tochka-strelka-smotr7 {
+            margin-top: 355px;
+            margin-left: 1020px;
+        }
+
+        .tochka-strelka-smotr8 {
+            margin-top: 340px;
+            margin-left: 1030px;
+        }
+
+        .tochka-strelka-smotr9 {
+            margin-top: 324px;
+            margin-left: 1035px;
+        }
+
+        .tochka-strelka-smotr10 {
+            margin-top: 337px;
+            margin-left: 1047px;
+        }
+
+        .tochka-strelka-smotr11 {
+            margin-top: 352px;
+            margin-left: 1057px;
+        }
+
+        .tochka-strelka-smotr12 {
+            margin-top: 328px;
+            margin-left: 1018px;
+        }
+
+        .tochka-strelka-smotr13 {
+            margin-top: 333px;
+            margin-left: 1002px;
+        }
+
+        /* stranica 3 */
+
+        .stranica3 {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(255, 81, 0);
+            position: absolute;
+            margin-top: 729px;
+        }
+
+        .stranica1-str3 {
+            width: 400px;
+            height: 645px;
+            position: absolute;
+            margin-top: 30px;
+            border-radius: 0 30px 30px 0;
+            background-color: rgb(255, 238, 200);
+            opacity: 0;
+            transform: translateY(100px) scale(0.95);
+            transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1),
+                opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 1s ease;
+            border-top: 10px solid rgba(255, 194, 103, 0.778);
+            border-right: 10px solid rgba(255, 194, 103, 0.778);
+            border-bottom: 10px solid rgba(255, 194, 103, 0.778);
+            border-left: none;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.268);
+        }
+
+        .stranica1-str3.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .text-stranica3-block1-pol2 {
+            width: 370px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.088);
+            position: absolute;
+            margin-top: 100px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-stranica3-block1-pol3,
+        .text-stranica3-block1-pol4,
+        .text-stranica3-block1-pol5,
+        .text-stranica3-block1-pol6 {
+            width: 300px;
+            height: 50px;
+            border-radius: 0 100px 100px 0;
+            background-color: rgba(0, 0, 0, 0.088);
+            position: absolute;
+            margin-top: 195px;
+            transition: width 0.4s ease, background-color 0.4s ease, border 0.4s ease,
+                box-shadow 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-stranica3-block1-pol3:hover,
+        .text-stranica3-block1-pol4:hover,
+        .text-stranica3-block1-pol5:hover,
+        .text-stranica3-block1-pol6:hover {
+            width: 330px;
+            background-color: rgba(255, 255, 255, 0.079);
+            border: 1px solid rgb(0, 0, 0);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.237);
+        }
+
+        .stranica3-block1-pol2-txt,
+        .stranica3-block1-pol3-txt,
+        .stranica3-block1-pol4-txt,
+        .stranica3-block1-pol5-txt,
+        .stranica3-block1-pol6-txt {
+            font-family: "Comfortaa", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 26px;
+            text-align: center;
+        }
+
+        .text-stranica3-block1-pol2 {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .stranica3-block1-pol2-txt {
+            font-family: "Comfortaa", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .text-stranica3-block1-pol2 {
+            width: 370px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.088);
+            position: absolute;
+            margin-top: 100px;
+            border-radius: 0 25px 25px 0;
+        }
+
+        .text-stranica3-block1-pol3 {
+            width: 300px;
+            height: 50px;
+            border-radius: 0 100px 100px 0;
+            background-color: rgba(0, 0, 0, 0.088);
+            position: absolute;
+            margin-top: 195px;
+        }
+
+        .text-stranica3-block1-pol4 {
+            width: 300px;
+            height: 50px;
+            border-radius: 0 100px 100px 0;
+            background-color: rgba(0, 0, 0, 0.088);
+            position: absolute;
+            margin-top: 265px;
+        }
+
+        .text-stranica3-block1-pol5 {
+            width: 300px;
+            height: 50px;
+            border-radius: 0 100px 100px 0;
+            background-color: rgba(0, 0, 0, 0.088);
+            position: absolute;
+            margin-top: 335px;
+        }
+
+        .text-stranica3-block1-pol6 {
+            width: 300px;
+            height: 50px;
+            border-radius: 0 100px 100px 0;
+            background-color: rgba(0, 0, 0, 0.088);
+            position: absolute;
+            margin-top: 405px;
+        }
+
+        .stranica1-str3 {
+            opacity: 0;
+            transform: translateY(100px) scale(0.95);
+            transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1),
+                opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .stranica1-str3.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* otsek2-str3 */
+
+        .vtoraya-stranica-str3 {
+            width: 1023px;
+            height: 605px;
+            position: absolute;
+            margin-top: 30px;
+            margin-left: 430px;
+            border-radius: 20px;
+            background-color: rgb(255, 255, 246);
+            border: 10px solid rgb(209, 229, 252);
+            transition: border-color 0.5s ease;
+            overflow-y: auto;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.268);
+        }
+
+        .vtoraya-stranica-str3 {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .vtoraya-stranica-str3.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* soderjimoe otsekov */
+
+        .block1-otsek1 {
+            width: 100%;
+            height: 200px;
+            background-color: rgb(163, 183, 255);
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.208);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text1-block1-otsek1 {
+            color: white;
+            font-family: "Rubik Mono One", monospace;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 7em;
+        }
+
+        .block-opisanie1-otsek1 {
+            width: 100%;
+            height: 240px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.112);
+            margin-top: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .text1-block-opisnie1-otsek1 {
+            color: rgb(0, 0, 0);
+            font-family: "Nunito", sans-serif;
+            font-size: 1.6em;
+            text-align: center;
+        }
+
+        /* carusel */
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 900px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin-top: -30px;
+            margin-left: 10px;
+        }
+
+        .carousel-img {
+            position: absolute;
+            border-radius: 10px;
+            transition: transform 1s ease, filter 1s ease, opacity 1s ease;
+            will-change: transform, filter, opacity;
+            margin-top: -140px;
+        }
+
+        .carousel img.active {
+            height: 550px;
+            transform: translateX(0) scale(1);
+            z-index: 2;
+            filter: blur(0);
+            opacity: 1;
+        }
+
+        .carousel img.left,
+        .carousel img.right {
+            height: 250px;
+            z-index: 1;
+            filter: blur(3px);
+            opacity: 0.8;
+            transition: all 1s ease;
+        }
+
+        .carousel img.left {
+            transform: translateX(-400px) scale(0.5);
+        }
+
+        .carousel img.right {
+            transform: translateX(400px) scale(0.5);
+        }
+
+        .carousel img.offscreen-left,
+        .carousel img.offscreen-right {
+            height: 250px;
+            opacity: 0;
+            z-index: 0;
+        }
+
+        .carousel img.offscreen-left {
+            transform: translateX(-800px) scale(0.5);
+        }
+
+        .carousel img.offscreen-right {
+            transform: translateX(800px) scale(0.5);
+        }
+
+        /* soderjanie2 otsek */
+
+        .block2-otsek2 {
+            width: 100%;
+            height: 200px;
+            background-color: rgb(255, 213, 96);
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.208);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -150px;
+        }
+
+        .text2-block2-otsek2 {
+            color: white;
+            font-family: "Rubik Mono One", monospace;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 7em;
+        }
+
+        .block-opisanie2-otsek2 {
+            width: 100%;
+            height: 340px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.112);
+            margin-top: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .text2-block-opisnie2-otsek2 {
+            color: rgb(0, 0, 0);
+            font-family: "Nunito", sans-serif;
+            font-size: 1.6em;
+            text-align: center;
+        }
+
+        /* farfor */
+
+        /* Общее затемнение для всех изображений */
+        .img1-farfor2,
+        .img2-farfor2,
+        .img3-farfor2,
+        .img4-farfor2,
+        .img5-farfor2 {
+            filter: brightness(50%);
+            /* Затенение изображения */
+            transition: filter 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            /* Плавный переход */
+            box-shadow: none;
+            /* Изначально тени нет */
+            transform: scale(1);
+            /* Изначальный размер изображения */
+        }
+
+        /* Возвращение к нормальной яркости, появление тени и увеличение при наведении */
+        .img1-farfor2:hover,
+        .img2-farfor2:hover,
+        .img3-farfor2:hover,
+        .img4-farfor2:hover,
+        .img5-farfor2:hover {
+            filter: brightness(100%);
+            /* Яркость на 100% при наведении */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            /* Тень при наведении */
+            transform: scale(1.03);
+            /* Увеличение на 5% при наведении */
+        }
+
+        /* Оригинальные стили */
+        .img1-farfor2 {
+            height: 586px;
+            margin-left: 10px;
+            border-radius: 5px;
+            margin-top: 65px;
+            position: absolute;
+        }
+
+        .img2-farfor2 {
+            height: 280px;
+            width: 260px;
+            margin-left: 467px;
+            margin-top: 65px;
+            border-radius: 5px;
+            position: absolute;
+        }
+
+        .img3-farfor2 {
+            height: 280px;
+            width: 260px;
+            margin-left: 753px;
+            margin-top: 65px;
+            border-radius: 5px;
+            position: absolute;
+        }
+
+        .img4-farfor2 {
+            height: 280px;
+            width: 260px;
+            margin-left: 467px;
+            margin-top: 370px;
+            object-fit: cover;
+            border-radius: 5px;
+            position: absolute;
+        }
+
+        .img5-farfor2 {
+            height: 280px;
+            width: 260px;
+            margin-left: 753px;
+            margin-top: 370px;
+            object-fit: cover;
+            border-radius: 5px;
+            position: absolute;
+        }
+
+        /* soderjanie 3 otsek2 str3 */
+
+        .block3-otsek3 {
+            width: 100%;
+            height: 200px;
+            background-color: rgb(255, 163, 234);
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.208);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 720px;
+        }
+
+        .text3-block3-otsek3 {
+            color: white;
+            font-family: "Rubik Mono One", monospace;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 6em;
+        }
+
+        .block-opisanie3-otsek3 {
+            width: 100%;
+            height: 260px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.112);
+            margin-top: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .text3-block-opisnie3-otsek3 {
+            color: rgb(0, 0, 0);
+            font-family: "Nunito", sans-serif;
+            font-size: 1.6em;
+            text-align: center;
+        }
+
+        /* kompozicia */
+
+        .trik-komp-img1,
+        .trik-komp-img2,
+        .trik-komp-img3 {
+            border-radius: 10px;
+            height: 450px;
+            position: absolute;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .trik-komp-img1:hover,
+        .trik-komp-img2:hover,
+        .trik-komp-img3:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.373);
+        }
+
+        .trik-komp-img1 {
+            margin-top: 30px;
+            margin-left: 4px;
+        }
+
+        .trik-komp-img2 {
+            margin-top: 30px;
+            margin-left: 345px;
+        }
+
+        .trik-komp-img3 {
+            margin-top: 30px;
+            margin-left: 694px;
+        }
+
+        /* final-opisanie */
+
+        .block4-otsek4 {
+            width: 100%;
+            height: 200px;
+            background-color: rgb(156, 255, 99);
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.208);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 530px;
+        }
+
+        .text4-block4-otsek4 {
+            color: white;
+            font-family: "Rubik Mono One", monospace;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 6em;
+        }
+
+        .block-opisanie4-otsek4 {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.112);
+            margin-top: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .text4-block-opisnie4-otsek4 {
+            color: rgb(0, 0, 0);
+            font-family: "Nunito", sans-serif;
+            font-size: 1.6em;
+            text-align: center;
+        }
+
+        .art1-img1-2k {
+            height: 740px;
+            position: absolute;
+            margin-top: 40px;
+            margin-left: 60px;
+        }
+
+        .art2-img1-2k {
+            height: 740px;
+            position: absolute;
+            margin-top: 40px;
+            margin-left: 500px;
+        }
+
+        .final-block-mesto {
+            width: 100%;
+            height: 40px;
+            position: absolute;
+            background-color: rgb(255, 255, 246);
+            margin-top: 800px;
+        }
+
+        /* str4 */
+
+        .stranica4 {
+            width: 100%;
+            height: 150vh;
+            background-color: white;
+            position: absolute;
+            margin-top: 200vh;
+        }
+
+        .shtorka-raboti-uchenikov-str4 {
+            width: 100%;
+            height: 270px;
+            border-radius: 0 0 200px 200px;
+            background-color: rgb(251, 207, 253);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-shtorka-raboti-uchenikov {
+            position: absolute;
+            font-family: "Rubik Mono One", monospace;
+            font-weight: 400;
+            font-style: normal;
+            color: white;
+            text-align: center;
+            font-size: 90px;
+            transition: transform 0.5s ease, text-shadow 0.4s ease;
+            cursor: pointer;
+            transform-origin: center;
+        }
+
+        .text-shtorka-raboti-uchenikov:hover {
+            transform: scale(1.1);
+            text-shadow: 0 0 30px rgba(155, 19, 179, 0.36);
+        }
+
+        .rabota1-uchenik,
+        .rabota2-uchenik,
+        .rabota3-uchenik,
+        .rabota4-uchenik {
+            height: 430px;
+            margin-top: 30px;
+        }
+
+        .carusel-container {
+            overflow: hidden;
+            width: 100%;
+            height: 470px;
+            position: relative;
+        }
+
+        .carusel-raboti-uchenikov {
+            display: flex;
+            width: calc(200%);
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .rabota1-uchenik,
+        .rabota2-uchenik,
+        .rabota3-uchenik,
+        .rabota4-uchenik {
+            height: 430px;
+            margin-right: 30px;
+        }
+
+        .container-kontakti {
+            width: 100%;
+            height: 360px;
+            background-color: #060723;
+            position: absolute;
+            margin-top: 2400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .telega-button,
+        .wk-button,
+        .pochta-button {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .telega-button:hover,
+        .wk-button:hover,
+        .pochta-button:hover {
+            transform: scale(1.2);
+        }
+
+        .telega-button:hover {
+            box-shadow: 0 0 35px rgb(0, 251, 255);
+        }
+
+        .wk-button:hover {
+            box-shadow: 0 0 35px rgb(0, 26, 255);
+        }
+
+        .pochta-button:hover {
+            box-shadow: 0 0 35px rgb(255, 0, 0);
+        }
+
+        .telega-button {
+            background-color: rgb(0, 191, 255);
+            background-image: url("telegram-logo.png");
+            background-size: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .wk-button {
+            background-color: rgb(0, 4, 255);
+            background-image: url("vk-logo.png");
+            background-size: 20%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .pochta-button {
+            background-color: rgb(255, 255, 255);
+            background-image: url("mail-logo.png");
+            background-size: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <div class="burger-menu-fixsed">
+        <div id="menu">
+            <div id="menu-bar" onclick="menuOnClick()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="#">о сайте</a></li>
+                    <li><a href="#contakti">контакты</a></li>
+                    <li><a href="#rlav-str">обо мне</a></li>
+                    <li><a href="#portfolio-stranica2">портфолио</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-bg" id="menu-bg"></div>
+    </div>
+
+    <!--poisk pole-->
+
+    <div class="container-poisk-pole">
+        <input class="poisk-pole" type="text" placeholder="Поиск...">
+    </div>
+
+    <!--knopka-vverx-->
+
+    <div class="knopka-vverx">
+        <p class="text-knopka-vverx">🡩</p>
+    </div>
+
+    <!--str1-->
+
+    <div class="stranica1" id="rlav-str">
+        <img src="https://i.postimg.cc/zv1z2W4R/Picsart-24-08-22-17-29-44-043.jpg" alt="ЕЛИЗАВЕТА ВЕДЯШКИНА"
+            class="foto-EM">
+        <p class="text-opisanie-img-EM">Елизавета Ведяшкина</p>
+        <div class="padding-text-opisanie-img-EM">
+            <p class="text2-opisanie-img-EM">Я - художник по фарфору, арт-дизайнер, репетитор по дисциплинам
+                художественного цикла. С красным дипломом окончила Колледж дизайна и декоративного искусства РГХПУ им.
+                С.Г. Строганова. На данный момент получаю высшее образование по профилю Предметный дизайн.</p>
+        </div>
+    </div>
+    <a class="strelka-provodnik" href="#stranica2">🡣</a>
+
+    <!--str2-->
+
+    <div class="stranica2" id="stranica2">
+        <p class="mon-raboti-text">мои работы</p>
+        <div class="parallelogram">
+            <p class="raboti-uchenikov-text">
+                <span class="raboti">работы</span><br>
+                <span class="uchenikov">учеников</span>
+            </p>
+        </div>
+        <div class="krug1 hidden">
+            <a class="nomer1-krug1" href="#stranica3">1</a>
+            <span class="krug-text" id="text1">живопись</span>
+        </div>
+        <div class="krug2 hidden">
+            <a class="nomer1-krug1" href="#stranica3">2</a>
+            <span class="krug-text" id="text2">фарфор</span>
+        </div>
+        <div class="krug3 hidden">
+            <a class="nomer1-krug1" href="#stranica3">3</a>
+            <span class="krug-text" id="text3">композиция</span>
+        </div>
+        <div class="krug4 hidden">
+            <a class="nomer1-krug1" href="#stranica3">4</a>
+            <span class="krug-text" id="text4">арт-дизайн</span>
+        </div>
+        <div class="block-smotret-rabot-uch">
+            <a href="#raboti-uchenikov" class="text-block-smotret-rabot-uch">смотрить</a>
+        </div>
+        <div class="tochka-strelka-smotr1 hidden"></div>
+        <div class="tochka-strelka-smotr2 hidden"></div>
+        <div class="tochka-strelka-smotr3 hidden"></div>
+        <div class="tochka-strelka-smotr4 hidden"></div>
+        <div class="tochka-strelka-smotr5 hidden"></div>
+        <div class="tochka-strelka-smotr6 hidden"></div>
+        <div class="tochka-strelka-smotr7 hidden"></div>
+        <div class="tochka-strelka-smotr8 hidden"></div>
+        <div class="tochka-strelka-smotr9 hidden"></div>
+        <div class="tochka-strelka-smotr10 hidden"></div>
+        <div class="tochka-strelka-smotr11 hidden"></div>
+        <div class="tochka-strelka-smotr12 hidden"></div>
+        <div class="tochka-strelka-smotr13 hidden"></div>
+    </div>
+    </div>
+
+    <!-- stranica3-->
+
+    <div class="stranica3" id="stranica3">
+        <div class="stranica1-str3">
+            <div class="text-stranica3-block1-pol2">
+                <p class="stranica3-block1-pol2-txt">портфолио</p>
+            </div>
+            <div class="text-stranica3-block1-pol3">
+                <p class="stranica3-block1-pol3-txt">живопись</p>
+            </div>
+            <div class="text-stranica3-block1-pol4">
+                <p class="stranica3-block1-pol4-txt">фарфор</p>
+            </div>
+            <div class="text-stranica3-block1-pol5">
+                <p class="stranica3-block1-pol5-txt">композиция</p>
+            </div>
+            <div class="text-stranica3-block1-pol6">
+                <p class="stranica3-block1-pol6-txt">арт-дизайн</p>
+            </div>
+        </div>
+
+        <!--otsek2.str3-->
+
+        <div class="vtoraya-stranica-str3">
+            <div class="block1-otsek1">
+                <p class="text1-block1-otsek1">живопись</p>
+            </div>
+            <div class="block-opisanie1-otsek1">
+                <p class="text1-block-opisnie1-otsek1">Академические работы, выполненные во время моей учебы в колледже
+                    и университете. Я пишу преимущественно в жанрах портрет и натюрморт. Из материалов использую
+                    темперу, так как она обеспечивает яркость и стойкость цвета, матовое покрытие, позволяет вести
+                    работу как лессировками, так и мазками.</p>
+            </div>
+            <div class="carousel">
+                <img src="https://static.tildacdn.info/tild3861-3531-4239-b034-303435643338/__.jpg"
+                    class="carousel-img jivopis-img1">
+                <img src="https://static.tildacdn.info/tild3231-3531-4931-b931-653534303961/IMG20240623142458.jpg"
+                    class="carousel-img jivopis-img2">
+                <img src="https://static.tildacdn.info/tild3533-3835-4865-b739-373030643831/_.jpg"
+                    class="carousel-img jivopis-img3">
+            </div>
+            <div class="block2-otsek2">
+                <p class="text2-block2-otsek2">фарфор</p>
+            </div>
+            <div class="block-opisanie2-otsek2">
+                <p class="text2-block-opisnie2-otsek2">Я выполняю ручную надглазурную роспись фарфоровой посуды
+                    профессиональными красками с последующим обжигом в печи. Использую в основном английский фарфор и
+                    люстровые краски, благодаря которым рисунок имеет перламутровый дуохромный блеск. Готовое изделие
+                    имеет в первую очередь декоративную функцию, может послужить уникальным подарком или ярким акцентом
+                    на кухне. При правильном уходе сохранит свой первоначальный вид на долгие годы.</p>
+            </div>
+            <div class="farfor-container-img">
+                <img src="https://static.tildacdn.info/tild6635-6337-4561-a635-386339613730/1.jpg" class="img1-farfor2">
+                <img src="https://static.tildacdn.info/tild6534-3632-4433-b736-383662633763/IMG_20240610_183957.jpg"
+                    class="img2-farfor2">
+                <img src="https://static.tildacdn.info/tild6466-3339-4239-a232-336162613832/IMG_20240525_215907.jpg"
+                    class="img3-farfor2">
+                <img src="https://static.tildacdn.info/tild6435-3462-4439-b865-623863336139/IMG20240524124702.jpg"
+                    class="img4-farfor2">
+                <img src="https://static.tildacdn.info/tild3435-3631-4137-b031-623232316138/IMG20240607192734.jpg"
+                    class="img5-farfor2">
+            </div>
+            <div class="block3-otsek3">
+                <p class="text3-block3-otsek3">композиция</p>
+            </div>
+            <div class="block-opisanie3-otsek3">
+                <p class="text3-block-opisnie3-otsek3">Авторская композиция - художественный образ, воплощенный
+                    художником на основе его воображения, насмотренности и выбранной стилистики. Как правило, авторская
+                    композиция - не дословный пересказ действительной реальности, а ее перефраз. Художник не подражает
+                    натуре, а с нуля (или почти с нуля) изображает образ, максимально выразительный по композиционным
+                    принципам.</p>
+            </div>
+            <div class="kompozicia-img-3k">
+                <img src="https://static.tildacdn.info/tild3533-3063-4564-a266-643463323730/2.jpg"
+                    class="trik-komp-img1">
+                <img src="https://static.tildacdn.info/tild6134-6662-4232-b163-386136383033/IMG_20240125_100706.jpg"
+                    class="trik-komp-img2">
+                <img src="https://static.tildacdn.info/tild3635-6163-4135-a634-623863613966/IMG20240125100346.jpg"
+                    class="trik-komp-img3">
+            </div>
+            <div class="block4-otsek4">
+                <p class="text4-block4-otsek4">Арт-дизайн</p>
+            </div>
+            <div class="block-opisanie4-otsek4">
+                <p class="text4-block-opisnie4-otsek4">Концептуальные дизайн - проекты</p>
+            </div>
+            <div class="art-img-2k">
+                <img src="https://static.tildacdn.info/tild3334-3161-4662-a464-363033353238/__.jpg"
+                    class="art1-img1-2k">
+                <img src="https://static.tildacdn.info/tild3165-6334-4133-b038-666363653238/_2__.jpg"
+                    class="art2-img1-2k">
+            </div>
+            <div class="final-block-mesto"></div>
+        </div>
+    </div>
+
+    <!--stranica4-->
+
+    <div class="stranica4" id="raboti-uchenikov">
+        <div class="shtorka-raboti-uchenikov-str4">
+            <p class="text-shtorka-raboti-uchenikov">РАБОТЫ УЧЕНИКОВ</p>
+        </div>
+
+        <div class="carusel-container">
+            <div class="carusel-raboti-uchenikov">
+                <img src="https://static.tildacdn.info/tild3764-3339-4234-b939-303634383130/photo.jpg"
+                    class="rabota1-uchenik">
+                <img src="https://static.tildacdn.info/tild3865-3435-4166-b733-313664333365/_.jpg"
+                    class="rabota2-uchenik">
+                <img src="https://static.tildacdn.info/tild3539-3630-4539-b433-323363656433/_2.jpg"
+                    class="rabota3-uchenik">
+                <img src="https://static.tildacdn.info/tild6163-3564-4561-a531-633534333264/photo.jpg"
+                    class="rabota4-uchenik">
+                <img src="https://static.tildacdn.info/tild3764-3339-4234-b939-303634383130/photo.jpg"
+                    class="rabota1-uchenik">
+                <img src="https://static.tildacdn.info/tild3865-3435-4166-b733-313664333365/_.jpg"
+                    class="rabota2-uchenik">
+                <img src="https://static.tildacdn.info/tild3539-3630-4539-b433-323363656433/_2.jpg"
+                    class="rabota3-uchenik">
+                <img src="https://static.tildacdn.info/tild6163-3564-4561-a531-633534333264/photo.jpg"
+                    class="rabota4-uchenik">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-kontakti" id="contakti">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1200px-Telegram_logo.svg.png"
+            class="telega-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/VK_Compact_Logo_%282021-present%29.svg/1024px-VK_Compact_Logo_%282021-present%29.svg.png"
+            class="wk-button">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbyRlpg4mCnOe7VmVb2Y0Dp-Zmex9BcJahhw&s"
+            class="pochta-button">
+    </div>
+
+    <script>
+
+        const knopkaVverx = {
+            el: document.querySelector(".knopka-vverx"),
+            show() {
+                this.el.classList.add("knopka-vverx_show");
+            },
+            hide() {
+                this.el.classList.remove("knopka-vverx_show");
+            },
+            addEventListener() {
+                window.addEventListener("scroll", () => {
+                    const scrollY = window.scrollY || document.documentElement.scrollTop;
+                    scrollY > 600 ? this.show() : this.hide();
+                });
+                this.el.onclick = () => {
+                    window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: "smooth",
+                    });
+
+                    this.el.classList.remove("knopka-vverx_show");
+                    setTimeout(() => this.el.classList.add("knopka-vverx_show"), 500);
+                };
+            },
+        };
+
+        knopkaVverx.addEventListener();
+
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute("href").substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: "smooth",
+                    });
+                }
+            });
+        });
+
+        function menuOnClick() {
+            document.getElementById("menu-bar").classList.toggle("change");
+            document.getElementById("nav").classList.toggle("change");
+            document.getElementById("menu-bg").classList.toggle("change-bg");
+        }
+
+        //stre 2
+
+        window.addEventListener("scroll", function () {
+            const scrollY = window.scrollY;
+
+            // Элементы текста
+            const monRabotiText = document.querySelector(".mon-raboti-text");
+            const rabotiUchenikovText = document.querySelector(".raboti-uchenikov-text");
+
+            // Анимация текста
+            if (scrollY > 400) {
+                if (!monRabotiText.classList.contains("visible")) {
+                    setTimeout(() => {
+                        monRabotiText.classList.add("visible");
+                    }, 270);
+                }
+
+                if (!rabotiUchenikovText.classList.contains("visible")) {
+                    setTimeout(() => {
+                        rabotiUchenikovText.classList.add("visible");
+                    }, 100);
+                }
+            } else {
+                if (monRabotiText.classList.contains("visible")) {
+                    monRabotiText.classList.remove("visible");
+                }
+
+                if (rabotiUchenikovText.classList.contains("visible")) {
+                    rabotiUchenikovText.classList.remove("visible");
+                }
+            }
+
+            // Круги
+            // Анимация появления кругов при прокрутке
+            window.addEventListener("scroll", function () {
+                const scrollY = window.scrollY;
+                const circles = [".krug1", ".krug2", ".krug3", ".krug4"];
+
+                circles.forEach((circle, index) => {
+                    const circleElement = document.querySelector(circle);
+                    if (scrollY > 500) {
+                        if (!circleElement.classList.contains("visible")) {
+                            circleElement.classList.remove("hidden");
+                            circleElement.classList.add("visible");
+                            circleElement.style.animationDelay = `${index * 0.2}s`; // Задержка для более динамичного появления
+                        }
+                    } else {
+                        if (circleElement.classList.contains("visible")) {
+                            circleElement.classList.remove("visible");
+                            circleElement.classList.add("hidden");
+                        }
+                    }
+                });
+            });
+
+            // Блок с работами
+            const block = document.querySelector(".block-smotret-rabot-uch");
+            if (scrollY > 400) {
+                block.classList.add("show");
+            } else {
+                block.classList.remove("show");
+            }
+
+            // Стрелки
+            const arrowElements = document.querySelectorAll(
+                ".tochka-strelka-smotr1, .tochka-strelka-smotr2, .tochka-strelka-smotr3, .tochka-strelka-smotr4, .tochka-strelka-smotr5, .tochka-strelka-smotr6, .tochka-strelka-smotr7, .tochka-strelka-smotr8, .tochka-strelka-smotr9, .tochka-strelka-smotr10, .tochka-strelka-smotr11, .tochka-strelka-smotr12, .tochka-strelka-smotr13"
+            );
+
+            if (scrollY > 400) {
+                arrowElements.forEach((arrow) => {
+                    arrow.classList.add("show-strelka");
+                });
+            } else {
+                arrowElements.forEach((arrow) => {
+                    arrow.classList.remove("show-strelka");
+                });
+            }
+        });
+
+        //str3
+
+
+
+
+
+        window.addEventListener("scroll", function () {
+            const stranica1Str3 = document.querySelector(".stranica1-str3");
+            if (window.scrollY > 1000) {
+                stranica1Str3.classList.add("show");
+            } else {
+                stranica1Str3.classList.remove("show");
+            }
+        });
+
+        //otsek 2 str3
+
+        window.addEventListener("scroll", function () {
+            const vtorayaStranicaStr3 = document.querySelector(".vtoraya-stranica-str3");
+            if (window.scrollY > 1000) {
+                vtorayaStranicaStr3.classList.add("show");
+            } else {
+                vtorayaStranicaStr3.classList.remove("show");
+            }
+        });
+
+        const images = document.querySelectorAll(".carousel-img");
+        let currentIndex = 0;
+
+        function updateCarouselPositions() {
+            const leftIndex = (currentIndex - 1 + images.length) % images.length;
+            const rightIndex = (currentIndex + 1) % images.length;
+
+            images.forEach((img, index) => {
+                img.classList.remove(
+                    "active",
+                    "left",
+                    "right",
+                    "offscreen-left",
+                    "offscreen-right"
+                );
+
+                if (index === currentIndex) {
+                    img.classList.add("active");
+                } else if (index === leftIndex) {
+                    img.classList.add("left");
+                } else if (index === rightIndex) {
+                    img.classList.add("right");
+                } else if (index < leftIndex || index > rightIndex) {
+                    img.classList.add("offscreen-left");
+                } else {
+                    img.classList.add("offscreen-right");
+                }
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateCarouselPositions();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateCarouselPositions();
+        }
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowRight") {
+                nextImage();
+            } else if (e.key === "ArrowLeft") {
+                prevImage();
+            }
+        });
+
+        let startX = 0;
+
+        document.addEventListener("mousedown", (e) => {
+            startX = e.pageX;
+        });
+
+        document.addEventListener("mouseup", (e) => {
+            if (e.pageX - startX > 50) {
+                prevImage();
+            } else if (startX - e.pageX > 50) {
+                nextImage();
+            }
+        });
+
+        updateCarouselPositions();
+
+
+        const container = document.querySelector('.vtoraya-stranica-str3');
+
+        container.addEventListener('scroll', function () {
+            container.scrollLeft = 0; // Устанавливаем горизонтальную прокрутку на 0, чтобы запретить движение по горизонтали
+        });
+
+        //zatemnenie
+
+
+
+
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
